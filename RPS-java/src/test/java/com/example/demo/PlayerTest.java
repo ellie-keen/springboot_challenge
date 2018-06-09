@@ -13,5 +13,12 @@ public class PlayerTest {
         player.setMove("rock");
         assertEquals(player.move, "rock");
     }
-    
+
+    @Test
+    public void setMoveNoArguments() {
+        Player player = new Player();
+        player.setMove();
+        assertEquals(player.move, "scissors");
+    }
+
 }

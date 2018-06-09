@@ -12,6 +12,10 @@ public class Player {
         this.move = move;
     }
 
+    public void setMove() {
+        this.move = "scissors";
+    }
+
 }
 
 
