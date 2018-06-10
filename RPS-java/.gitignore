@@ -27,3 +27,5 @@
 node_modules
 package-lock.json
 src/main/resources/static/
+selenium-debug.log
+tests_output/
