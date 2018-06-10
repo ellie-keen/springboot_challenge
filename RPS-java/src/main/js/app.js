@@ -1,13 +1,11 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+import Form from './form'
 
 class App extends React.Component {
 	render() {
 		return (
-		    <form>
-              <input type="text" name="move" />
-              <input type="submit" value="Submit" />
-            </form>
+		    <Form />
 		);
 	}
 }
