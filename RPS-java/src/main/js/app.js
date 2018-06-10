@@ -5,7 +5,10 @@ import Form from './form'
 class App extends React.Component {
 	render() {
 		return (
-		    <Form />
+		      <div>
+        		    <p>Choose a move</p>
+                    <Form />
+              </div>
 		);
 	}
 }
