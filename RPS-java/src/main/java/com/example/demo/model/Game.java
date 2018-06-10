@@ -14,17 +14,29 @@ public class Game {
         this.player2 = player2;
     }
 
-    public String play(){
-        if (player1.move == player2.move) {
-            return "Draw";
-        } else if (player1.move == "rock" && player2.move == "scissors") {
-            return "You win";
-        } else if (player1.move == "scissors" && player2.move == "paper") {
-            return "You win";
-        } else if (player1.move == "paper" && player2.move == "rock") {
-            return "You win";
+    public String play() {
+        if (draw()) {
+            return "Draw!";
+        } else if (rockWins() || scissorsWins() || paperWins()) {
+            return "Player 1 wins!";
         } else {
-            return "You lose";
+            return "Player 2 wins!";
         }
+    }
+
+    private Boolean rockWins() {
+       return player1.move == "rock" && player2.move == "scissors";
+    }
+
+    private Boolean scissorsWins() {
+        return player1.move == "scissors" && player2.move == "paper";
+    }
+
+    private Boolean paperWins() {
+        return player1.move == "paper" && player2.move == "rock";
+    }
+
+    private Boolean draw() {
+        return player1.move == player2.move;
     }
 }

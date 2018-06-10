@@ -15,15 +15,15 @@ public class GameTest {
         Game game = new Game(player1, player2);
         player1.setMove("rock");
         player2.setMove("rock");
-        assertEquals("Draw", game.play());
+        assertEquals("Draw!", game.play());
     }
 
     @Test
-    public void withWithRock(){
+    public void winWithRock(){
         player1.setMove("rock");
         player2.setMove("scissors");
         Game game = new Game(player1, player2);
-        assertEquals("You win", game.play());
+        assertEquals("Player 1 wins!", game.play());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class GameTest {
         player1.setMove("rock");
         player2.setMove("paper");
         Game game = new Game(player1, player2);
-        assertEquals("You lose", game.play());
+        assertEquals("Player 2 wins!", game.play());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class GameTest {
         player1.setMove("scissors");
         player2.setMove("paper");
         Game game = new Game(player1, player2);
-        assertEquals("You win", game.play());
+        assertEquals("Player 1 wins!", game.play());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class GameTest {
         player1.setMove("scissors");
         player2.setMove("rock");
         Game game = new Game(player1, player2);
-        assertEquals("You lose", game.play());
+        assertEquals("Player 2 wins!", game.play());
     }
 
     @Test
@@ -55,7 +55,7 @@ public class GameTest {
         player1.setMove("paper");
         player2.setMove("rock");
         Game game = new Game(player1, player2);
-        assertEquals("You win", game.play());
+        assertEquals("Player 1 wins!", game.play());
     }
 
     @Test
@@ -63,7 +63,7 @@ public class GameTest {
         player1.setMove("paper");
         player2.setMove("scissors");
         Game game = new Game(player1, player2);
-        assertEquals("You lose", game.play());
+        assertEquals("Player 2 wins!", game.play());
     }
 
 }

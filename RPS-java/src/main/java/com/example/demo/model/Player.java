@@ -9,12 +9,6 @@ public class Player {
 
     public String move;
 
-    private String randomMove() {
-        String [] rps = new String[]{"rock", "paper", "scissors"};
-        int num = new Random().nextInt(rps.length);
-        return rps[num];
-    }
-
     public String getMove() {
         return this.move;
     }
@@ -25,6 +19,12 @@ public class Player {
 
     public void setMove() {
         this.move = randomMove();
+    }
+
+    private String randomMove() {
+        String [] rps = new String[]{"rock", "paper", "scissors"};
+        int num = new Random().nextInt(rps.length);
+        return rps[num];
     }
 
 }
